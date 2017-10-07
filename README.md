@@ -1,10 +1,16 @@
 # A Stripped-Down Jump Start Child Theme
 
-Even when using the "Developer" theme base of [Jump Start](https://wpjumpstart.com), often developers faced with creating a really custom-looking design that deviates from the default end-user features to setup the website header and footer can find it challenging to navigate through all of the action hooks.
+This is an example [Jump Start](https://wpjumpstart.com) child theme for developers that want to truly strip things down and build a custom design.
+
+## The Basic Setup
+
+Even when using the "Developer" theme base of Jump Start, often developers are faced with creating a really custom-looking design that deviates from the default end-user features to setup the website header and footer can find it challenging to navigate through all of the action hooks.
 
 This child theme example takes a fairly simple approach to basically just strip away everything from the top-level action hooks that output the header and footer of the website. Then, files `content-header.php` and `content-footer.php` are included to hold the inner content of the header and footer.
 
 Now, instead of dealing with the confusion of tracking down action hooks within action hooks, we just strip everything away at the top-level and manage it all within our two simple files, located in the `template-parts` directory.
+
+This also creates a nice separation of HTML markup and template tags, from the PHP code organized within your child theme's `functions.php`.
 
 ## Useable Pieces
 
@@ -26,13 +32,15 @@ Output the main menu assigned to the "Primary Navigation" location at *Appearanc
 
 ### A More Stripped-Down Main Menu
 
-Alternately to the previous example, if you're looking to just output a stripped down output of the main menu that you want to style from scratch, you could do something like the following.
+Alternately to the previous example, if you're looking to just output a stripped down version of the main menu that you can style from scratch, you could do something like the following.
 
 	<?php
 	wp_nav_menu( array(
 		'theme_location' => apply_filters( 'themeblvd_primary_menu_location', 'primary' )
 	));
 	?>
+
+*Note: Keeping that `themeblvd_primary_menu_location` filter in place can come in handy if you ever want to filter in different menus for difference scenarios. For example, maybe users logged into your site see a different menu? Or maybe different pages of your site use different menus?*
 
 ### Minimal Side Menu
 
@@ -42,7 +50,9 @@ In this case, add your site's main navigation to one of the "Side Menu" location
 
 	<?php themeblvd_side_trigger(); ?>
 
-*Note: The menu itself will be outputted by the theme automatically (if assigned from Appearance > Menus) and will be hidden. So that's why all you need to do is display the hamburger button with the above code.*
+*Note: The menu itself will be outputted by the theme automatically (if assigned from Appearance > Menus) and will be hidden with CSS. So that's why all you need to do is display the hamburger button with the above code, to give the user a way to actually toggle the menu open and closed.*
+
+*Note: Also note that the "side menu" is for desktop users ONLY; it is completely separate from the hidden mobile menu which is for mobile users only.*
 
 ### Mobile Menu
 
