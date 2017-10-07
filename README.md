@@ -4,11 +4,11 @@ This is an example [Jump Start](https://wpjumpstart.com) child theme for develop
 
 ## The Basic Setup
 
-Even when using the "Developer" theme base of Jump Start, often developers are faced with creating a really custom-looking design that deviates from the default end-user features to setup the website header and footer can find it challenging to navigate through all of the action hooks.
+Even when using the "Developer" theme base of Jump Start, often developers looking to create a really custom design can find it challenging to navigate through all of the action hooks.
 
 This child theme example takes a fairly simple approach to basically just strip away everything from the top-level action hooks that output the header and footer of the website. Then, files `content-header.php` and `content-footer.php` are included to hold the inner content of the header and footer.
 
-Now, instead of dealing with the confusion of tracking down action hooks within action hooks, we just strip everything away at the top-level and manage it all within our two simple files, located in the `template-parts` directory.
+Now, instead of dealing with the confusion of tracking down action hooks within action hooks and all the default callbacks, we just strip everything away at the top-level and manage it all within our simple files located in the `template-parts` directory.
 
 This also creates a nice separation of HTML markup and template tags, from the PHP code organized within your child theme's `functions.php`.
 
