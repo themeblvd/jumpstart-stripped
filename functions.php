@@ -28,10 +28,8 @@ function jumpstart_option_id( $id ) {
 add_filter( 'themeblvd_option_id', 'jumpstart_option_id' );
 
 /**
- * Empty out the header.
- *
- * Here, we're removing all of the default top-level header
- * action hooks when using the "Developer" theme base.
+ * Remove default, top-level header action callbacks,
+ * when using the "Developer" theme base.
  */
 remove_action( 'themeblvd_header_top', 'themeblvd_header_top_default' );
 remove_action( 'themeblvd_header_above', 'themeblvd_header_above_default' );
@@ -52,17 +50,15 @@ function my_site_header() {
 add_action( 'themeblvd_header_content', 'my_site_header' );
 
 /**
- * Empty out the footer.
- *
- * Here, we're removing all of the default top-level footer
- * action hooks when using the "Developer" theme base.
+ * Remove default, top-level footer action callbacks,
+ * when using the "Developer" theme base.
  */
 remove_action( 'themeblvd_footer_content', 'themeblvd_footer_content_default' );
 remove_action( 'themeblvd_footer_sub_content', 'themeblvd_footer_sub_content_default' );
 remove_action( 'themeblvd_footer_below', 'themeblvd_footer_below_default' );
 
 /**
- * Add custom header.
+ * Add custom footer.
  *
  * Our footer content can now be edited from
  * /template-parts/content-footer.php
