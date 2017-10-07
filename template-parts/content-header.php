@@ -7,7 +7,7 @@
  * to build your website header from scratch.
  *
  * When inspecting your website on the frontend, this
- * is the basic struction you should see:
+ * is the basic structure you should see:
  *
  * <div id="top">
  *    <header id="branding" class="site-header">

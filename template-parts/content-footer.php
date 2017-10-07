@@ -7,7 +7,7 @@
  * to build your website footer from scratch.
  *
  * When inspecting your website on the frontend, this
- * is the basic struction you should see:
+ * is the basic structure you should see:
  *
  * <div id="bottom">
  *    <footer id="colophon" class="site-footer">
