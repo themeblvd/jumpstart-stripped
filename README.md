@@ -4,7 +4,7 @@ This is an example [Jump Start](https://wpjumpstart.com) child theme for develop
 
 Even when using the "Developer" theme base of Jump Start, often developers looking to create a really custom design can find it challenging to navigate through all of the action hooks. So hopefully we can simplify things a bit with this child theme starting point.
 
-**This child theme requires that you are using the "Developer" theme base, selected from *Appearance > Theme Base* of your WordPress admin.**
+*Note: This child theme requires that you are using the "Developer" theme base, selected from Appearance > Theme Base of your WordPress admin.*
 
 ## The Basic Setup
 
